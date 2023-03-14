@@ -1,0 +1,62 @@
+/* Moz */
+
+* {
+  scroll-behavior: smooth;
+  scrollbar-color: var(--logo-red) var(--first-color);
+}
+
+aside * {
+  scrollbar-color: var(--first-color) transparent;
+}
+
+
+/* WebKit */
+
+::-webkit-scrollbar {
+  width: .5rem;
+  background: var(--first-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--logo-red);
+}
+
+.menu-open ::-webkit-scrollbar-thumb {
+  background: var(--logo-red-to-first-1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--logo-red);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--logo-red-to-first-1);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: var(--logo-red-to-first-2);
+}
+
+aside ::-webkit-scrollbar {
+  width: .5rem !important;
+  background: transparent !important;
+}
+
+aside ::-webkit-scrollbar-thumb {
+  background: var(--first-color) !important;
+}
+
+aside ::-webkit-scrollbar-thumb:hover {
+  background: var(--soiled-first) !important;
+}
+
+aside ::-webkit-scrollbar-thumb:active {
+  background: var(--more-soiled-first) !important;
+}
+
+/* half sm */
+@media (min-width: 288px) {
+	::-webkit-scrollbar {
+		width: .75rem;
+	}
+}
