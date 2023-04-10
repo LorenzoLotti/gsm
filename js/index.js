@@ -6,9 +6,11 @@ const menuBtn = document.querySelector('#menu-btn')
 const closeMenuBtn = document.querySelector('#close-menu-btn')
 const phoneIcons = document.querySelectorAll('.i-phone')
 const waIcons = document.querySelectorAll('.i-wa')
+const navLinks = nav.querySelectorAll('a')
 
 const phone = "3388940211"
 addEventListener('resize', closeMenu)
+addEventListener('hashchange', closeMenu)
 menuBtn.addEventListener('click', openMenu)
 closeMenuBtn.addEventListener('click', closeMenu)
 
@@ -37,6 +39,9 @@ tippy('.i-phone',
 	theme: 'light-border',
 	animation: 'shift-away',
 })
+
+for (const a of navLinks)
+	a.addEventListener('click', () => location.hash = '')
 
 for (const icon of phoneIcons)
 	icon.addEventListener('click', () => open('tel:+39' + phone, '_self'))

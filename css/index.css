@@ -74,6 +74,10 @@
 	font-family: 'Montserrat';
 }
 
+::selection {
+  background: var(--logo-red);
+}
+
 html, body, #main-filter, main, aside {
 	margin: 0;
 	height: 100%;
