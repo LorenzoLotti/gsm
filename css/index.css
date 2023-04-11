@@ -420,6 +420,26 @@ nav a:active {
 	animation: driving 3s infinite alternate ease-in-out;
 }
 
+#footer-container {
+	display: flex;
+	justify-content: center;
+	padding: 2rem;
+	padding-top: 0;
+}
+
+footer {
+	width: max-content;
+	text-align: center;
+	padding: 1.25rem;
+	border-radius: 1rem;
+}
+
+.box {
+	background: var(--box-color);
+	border: 1px solid var(--box-border-color);
+	box-shadow: 0 .375rem 1rem var(--box-color);
+}
+
 @media (min-width: 40ch) {
 	:root {
 		--shift: 30ch;
@@ -487,6 +507,8 @@ nav a:active {
 		--logo-red-to-first-1: #F04E4E;
 		--logo-red-to-first-2: #F26767;
 		--main-shadow-color: gray;
+		--box-color: lightgray;
+		--box-border-color: darkgray;
 	}
 
 	.just-dark {
@@ -504,6 +526,8 @@ nav a:active {
 		--logo-red-to-first-1: #a30101;
 		--logo-red-to-first-2: #8c0101;
 		--main-shadow-color: #444;
+		--box-color: var(--main-shadow-color);
+		--box-border-color: #666;
 	}
 
 	.just-light {

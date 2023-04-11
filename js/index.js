@@ -1,18 +1,13 @@
 // Elements.
-const mapsTemplate = document.querySelector("#t-maps")
 const main = document.querySelector('main')
 const nav = document.querySelector('nav')
-const menuBtn = document.querySelector('#menu-btn')
-const closeMenuBtn = document.querySelector('#close-menu-btn')
-const phoneIcons = document.querySelectorAll('.i-phone')
-const waIcons = document.querySelectorAll('.i-wa')
-const navLinks = nav.querySelectorAll('a')
 
-const phone = "3388940211"
+const mail = 'giacomo.officinalotti@gmail.com'
+const phone = '3388940211'
 addEventListener('resize', closeMenu)
 addEventListener('hashchange', closeMenu)
-menuBtn.addEventListener('click', openMenu)
-closeMenuBtn.addEventListener('click', closeMenu)
+document.querySelector('#menu-btn').addEventListener('click', openMenu)
+document.querySelector('#close-menu-btn').addEventListener('click', closeMenu)
 
 nav.addEventListener('scroll', () =>
 {
@@ -25,7 +20,7 @@ nav.addEventListener('scroll', () =>
 tippy('.i-maps',
 {
 	allowHTML: true,
-	content: mapsTemplate.innerHTML,
+	content: document.querySelector('#t-maps').innerHTML,
 	theme: 'light-border map',
 	animation: 'shift-away',
 	interactive: true,
@@ -34,20 +29,56 @@ tippy('.i-maps',
 
 tippy('.i-phone',
 {
-	allowHTML: true,
 	content: '+39 ' + phone,
 	theme: 'light-border',
 	animation: 'shift-away',
 })
 
-for (const a of navLinks)
-	a.addEventListener('click', () => location.hash = '')
+tippy('.i-wa',
+{
+	content: 'WhatsApp',
+	theme: 'light-border',
+	animation: 'shift-away',
+})
 
-for (const icon of phoneIcons)
-	icon.addEventListener('click', () => open('tel:+39' + phone, '_self'))
+tippy('.i-mail',
+{
+	content: mail,
+	theme: 'light-border',
+	animation: 'shift-away',
+})
 
-for (const icon of waIcons)
-	icon.addEventListener('click', () => open('https://wa.me/39' + phone, '_self'))
+tippy('.i-fb',
+{
+	content: 'Facebook',
+	theme: 'light-border',
+	animation: 'shift-away',
+})
+
+tippy('.i-ig',
+{
+	content: 'Instagram',
+	theme: 'light-border',
+	animation: 'shift-away',
+})
+
+nav.querySelectorAll('a').forEach(a =>
+	a.addEventListener('click', () => location.hash = ''))
+
+document.querySelectorAll('.i-phone').forEach(icon =>
+	icon.addEventListener('click', () => open('tel:+39' + phone, '_self')))
+
+document.querySelectorAll('.i-wa').forEach(icon =>
+	icon.addEventListener('click', () => open('https://wa.me/39' + phone, '_self')))
+
+document.querySelectorAll('.i-mail').forEach(icon =>
+	icon.addEventListener('click', () => open('mailto:' + mail, '_self')))
+
+document.querySelectorAll('.i-fb').forEach(icon =>
+	icon.addEventListener('click', () => open('https://fb.me'), '_self'))
+
+document.querySelectorAll('.i-ig').forEach(icon =>
+	icon.addEventListener('click', () => open('https://ig.me'), '_self'))
 
 function openMenu()
 {
