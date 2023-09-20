@@ -13,7 +13,7 @@ document.querySelectorAll('.vertical-normalization').forEach(carousel =>
 		{
 			minHeight = image.getBoundingClientRect().height
 			minHeightImage = image
-			minHeightAspectRatio = minHeight / image.getBoundingClientRect().width;
+			minHeightAspectRatio = minHeight / image.getBoundingClientRect().width
 		}
 	}
 
@@ -22,7 +22,7 @@ document.querySelectorAll('.vertical-normalization').forEach(carousel =>
 		if (image != minHeightImage)
 		{
 			const aspectRatio = image.getBoundingClientRect().width / image.getBoundingClientRect().height
-			let percentage = aspectRatio * minHeightAspectRatio * 100;
+			let percentage = aspectRatio * minHeightAspectRatio * 100
 			image.style.width = percentage + '%'
 
 			if (percentage < 100)
