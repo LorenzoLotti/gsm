@@ -10,7 +10,12 @@
 		<link rel="stylesheet" href="./css/index.css">
 		<script src="https://unpkg.com/@popperjs/core@2" defer></script>
 		<script src="https://unpkg.com/tippy.js@6" defer></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/js/bootstrap.bundle.min.js"
+			defer
+		></script>
 		<script src="./js/index.js" defer></script>
+		<script src="./js/carousel-normalization.js" defer></script>
 	</head>
 	<body>
 		<template id="t-maps">
@@ -88,6 +93,75 @@
 							</div>
 						</div>
 
+						<div id="veicoli">
+							<h1 class="text-center adaptive-text-size"><span>I nostri veicoli</span></h1>
+							<div class="mx-xl-5">
+								<div class="row g-0 cols-gap">
+									<div class="col-sm-6 col-md-4 col-lg-3">
+										<div class="box">
+											<div
+												id="carousel"
+												class="carousel cny slide"
+												data-bs-pause="false"
+												data-bs-ride="carousel"
+											>
+												<div class="carousel-inner">
+													<div class="carousel-item active">
+														<img src="./res/veicoli/swift.jpg" class="d-block w-100" alt="...">
+													</div>
+													<div class="carousel-item">
+														<img src="./res/veicoli/lato_swift.jpg" class="d-block w-100" alt="...">
+													</div>
+													<div class="carousel-item">
+														<img src="./res/veicoli/angolo_swift.jpg" class="d-block w-100" alt="...">
+													</div>
+													<div class="carousel-item">
+														<img src="./res/veicoli/retro_swift.jpg" class="d-block w-100" alt="...">
+													</div>
+												</div>
+												<button
+													class="carousel-control-prev"
+													data-bs-target="#carousel"
+													data-bs-slide="prev"
+												>
+													<span class="carousel-control-prev-icon"></span>
+												</button>
+												<button
+													class="carousel-control-next"
+													data-bs-target="#carousel"
+													data-bs-slide="next"
+												>
+													<span class="carousel-control-next-icon"></span>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6 col-md-4 col-lg-3">
+										<div class="box">fdv</div>
+									</div>
+									<div class="col-sm-6 col-md-4 col-lg-3">
+										<div class="box">dv</div>
+									</div>
+									<div class="col-sm-6 col-md-4 col-lg-3">
+										<div class="box">df</div>
+									</div>
+									<div class="col-sm-6 col-md-4 col-lg-3">
+										<div class="box">fdv</div>
+									</div>
+									<div class="col-sm-6 col-md-4 col-lg-3">
+										<div class="box">dv</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="separator">
+							<div class="dashed-strip"></div>
+							<div class="car-container">
+								<div class="car"></div>
+							</div>
+						</div>
+
 						<div id="footer-container">
 							<footer class="box">
 								Zona industriale Barberino Tavarnelle 50028 loc. Sambuca V.P. <br>
@@ -106,6 +180,7 @@
 			</header>
 			<nav>
 				<div><a href="#home">Home</a></div>
+				<div><a href="#veicoli">Veicoli</a></div>
 			</nav>
 		</aside>
 	</body>

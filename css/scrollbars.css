@@ -1,6 +1,7 @@
 /* Moz */
 
 * {
+	scroll-margin-top: 2rem;
   scroll-behavior: smooth;
   scrollbar-color: var(--logo-red) var(--first-color);
 }
