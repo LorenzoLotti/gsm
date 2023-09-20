@@ -3,16 +3,14 @@ document.querySelectorAll('.vertical-normalization').forEach(carousel =>
 	const images = carousel.querySelectorAll('.carousel-item > img')
 	let loadedImages = 0
 
-	for (const image of images)
+	const callback = () =>
 	{
-		const callback = () =>
-		{
-			if (++loadedImages >= images.length)
-				normalizeVertically(images)
-		}
-
-		image.complete ? callback() : image.addEventListener('load', callback)
+		if (++loadedImages >= images.length)
+			normalizeVertically(images)
 	}
+
+	for (const image of images)
+		image.complete ? callback() : image.addEventListener('load', callback)
 })
 
 function normalizeVertically(images)
