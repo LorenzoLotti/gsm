@@ -75,6 +75,7 @@
 }
 
 ::selection {
+	color: white;
   background: var(--logo-red);
 }
 
