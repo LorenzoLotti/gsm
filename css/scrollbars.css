@@ -1,7 +1,7 @@
 /* Moz */
 
 * {
-	scroll-margin-top: 2rem;
+	scroll-margin-top: 1rem;
   scroll-behavior: smooth;
   scrollbar-color: var(--logo-red) var(--first-color);
 }
