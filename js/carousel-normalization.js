@@ -1,9 +1,25 @@
 document.querySelectorAll('.vertical-normalization').forEach(carousel =>
 {
+	const images = carousel.querySelectorAll('.carousel-item > img')
+	let loadedImages = 0
+
+	for (const image of images)
+	{
+		const callback = () =>
+		{
+			if (++loadedImages >= images.length)
+				normalizeVertically(images)
+		}
+
+		image.complete ? callback() : image.addEventListener('load', callback)
+	}
+})
+
+function normalizeVertically(images)
+{
 	let minHeight = null
 	let minHeightImage = null
 	let minHeightAspectRatio = null
-	const images = carousel.querySelectorAll('.carousel-item > img')
 
 	for (const image of images)
 	{
@@ -41,4 +57,4 @@ document.querySelectorAll('.vertical-normalization').forEach(carousel =>
 
 		image.parentElement.style.display = null
 	}
-})
+}
